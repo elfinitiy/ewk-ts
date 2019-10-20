@@ -1,0 +1,15 @@
+on: push
+
+jobs:
+    build_job:
+        runs-on: ubuntu-18.04
+        container:
+            image: node:10.16.3-stretch
+            
+        steps:
+            - 
+                uses: actions/checkout@master
+            -
+                env: 
+                    NPM_TOKEN: ${{ secrets.NPM_TOKEN }} 
+                run: "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc && yarn install && yarn build && yarn publish --non-interactive"

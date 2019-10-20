@@ -1,0 +1,20 @@
+{
+  "name": "ewk-ts",
+  "version": "0.2.0",
+  "description": "Typescript compiler extensions",
+  "main": "./dist/index.js",
+  "author": "Ruslan Cisa",
+  "license": "MIT",
+  "repository": "github:elfinitiy/ewk-ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "dependencies": {
+    "@types/node": "^12.7.11",
+    "typescript": "^3.6.3"
+  }
+}
